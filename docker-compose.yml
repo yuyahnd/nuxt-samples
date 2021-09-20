@@ -1,0 +1,12 @@
+version: '3'
+services:
+  nuxt:
+    container_name: nuxt
+    build:
+      context: ./nuxt
+      dockerfile: Dockerfile
+    volumes:
+      - ./nuxt:/app
+    ports:
+      - 80:3000
+    tty: true
